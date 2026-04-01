@@ -1,0 +1,11 @@
+﻿# Node / Vite fallback
+node_modules/
+dist/
+.DS_Store
+# Backups
+*.backup
+*.zip
+# Temporary
+.tmp/
+.obsidian/
+RECYCLED/
