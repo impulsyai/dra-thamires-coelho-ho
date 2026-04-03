@@ -36,8 +36,8 @@ const siteConfig = {
     hero: {
         title: "O Segredo da Mandíbula Definida: Transformação Natural com o <span class='text-primary italic'>Método TC</span>.",
         description: "Protocolos exclusivos e tecnologia avançada para realçar sua beleza natural sem perder a essência. Especialista em Lipo de Papada HD e Bichectomia.",
-        ctaMain: "Agendar minha avaliação",
-        ctaSecondary: "Conhecer o Método TC",
+        ctaMain: "Conhecer o Método TC",
+        ctaSecondary: "Agendar minha avaliação",
         badge: "Dra. Thamires Coelho - Harmonização Orofacial"
     },
     sections: {
