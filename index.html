@@ -1,4 +1,6 @@
-<html class="scroll-smooth" lang="pt-BR"><head></head><body class="bg-surface font-body text-on-surface selection:bg-primary/20">```html
+﻿<!DOCTYPE html>
+<html class="scroll-smooth" lang="pt-BR">
+<head>
 
 
 
@@ -6,6 +8,16 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta name="description" content="Especialista em Harmonização Orofacial e Lipo de Papada HD em Vitória da Conquista. Conquiste resultados naturais e seguros com a Dra. Thamires Coelho e o exclusivo Método TC.">
 <title>Dra. Thamires Coelho - Harmonização Orofacial & Lipo de Papada HD</title>
+
+<!-- SEO & Open Graph Tags -->
+<link rel="icon" type="image/png" href="assets/images/logo.png">
+<meta property="og:title" content="Dra. Thamires Coelho - Harmonização Orofacial & Lipo de Papada HD em Vitória da Conquista">
+<meta property="og:description" content="Especialista em Harmonização Orofacial e Lipo de Papada HD em Vitória da Conquista. Conquiste resultados naturais e seguros com a Dra. Thamires Coelho e o exclusivo Método TC.">
+<meta property="og:url" content="https://drathamirescoelho.com.br">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://drathamirescoelho.com.br/assets/images/hero-bg.png">
+<meta name="twitter:card" content="summary_large_image">
+
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
@@ -78,14 +90,14 @@
         50% { transform: rotate(-2deg); }
       }
 
-      /* Shimmer Button Effect (from Stitch) */
-      .shimmer-button {
+      /* Shimmer Button Effect (from Stitch/User Request) */
+      .btn-luxury {
         position: relative;
         overflow: hidden;
         background: linear-gradient(135deg, #6a5e33 0%, #c2b280 100%) !important;
         transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
       }
-      .shimmer-button::after {
+      .btn-luxury::after {
         content: '';
         position: absolute;
         top: -50%;
@@ -110,25 +122,49 @@
       }
       .btn-press:active { transform: scale(0.96); }
     </style>
+
+<style id="anti-fouc">
+  html.js #heroBadge,
+  html.js #home h1,
+  html.js #home p,
+  html.js #home .flex-col.items-start,
+  html.js #home .aspect-\[4\/5\],
+  html.js #home .glass-effect {
+    visibility: hidden;
+  }
+</style>
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary/20">
 <!-- TopNavBar -->
 <script src="config.js"></script>
-<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-xl shadow-sm shadow-zinc-200/20 dark:shadow-none">
-<nav class="flex justify-between items-center px-6 md:px-12 py-4 max-w-[1920px] mx-auto">
+<header id="main-header" class="fixed top-0 w-full z-50 bg-[#1a1410]/95 backdrop-blur-xl shadow-md transition-all duration-500">
+<nav id="main-nav" class="flex justify-between items-center px-6 md:px-12 py-4 max-w-[1920px] mx-auto transition-all duration-500">
 <a href="#home" class="flex-shrink-0">
-                <img src="assets/images/logo.png" loading="lazy" alt="Dra. Thamires Coelho Logo" class="h-14 md:h-20 w-auto object-contain">
+                <img src="assets/images/logo-tc-white.png" loading="lazy" alt="Dra. Thamires Coelho Logo" id="header-logo" class="h-14 md:h-20 w-auto object-contain transition-all duration-500">
             </a>
 <div class="hidden md:flex items-center gap-8 font-serif text-sm tracking-tight font-medium">
-<a class="text-[#b08d57] dark:text-[#e6cc9a] font-semibold border-b-2 border-[#b08d57] pb-1 hover:scale-105 transition-transform duration-300" href="#home">Home</a>
-<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 hover:scale-105 transition-transform duration-300" href="#servicos">Serviços</a>
-<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 hover:scale-105 transition-transform duration-300" href="#clinica">A Clínica</a>
-<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 hover:scale-105 transition-transform duration-300" href="#resultados">Resultados</a>
-<a class="text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 hover:scale-105 transition-transform duration-300" href="#localizacao">Localização</a>
+<a class="text-[#d4b06a] font-semibold border-b-2 border-[#d4b06a] pb-1 hover:scale-105 transition-transform duration-300" href="#home">Home</a>
+<a class="text-zinc-300 hover:text-white hover:scale-105 transition-all duration-300" href="#servicos">Serviços</a>
+<a class="text-zinc-300 hover:text-white hover:scale-105 transition-all duration-300" href="#clinica">A Clínica</a>
+<a class="text-zinc-300 hover:text-white hover:scale-105 transition-all duration-300" href="#resultados">Resultados</a>
+<a class="text-zinc-300 hover:text-white hover:scale-105 transition-all duration-300" href="#localizacao">Localização</a>
 </div>
-<div class="flex items-center gap-4">
-    <a class="shimmer-button btn-press text-white px-4 md:px-6 py-2 rounded-full font-medium text-xs md:text-sm transition-all hover:scale-105 active:scale-95 shadow-lg shadow-primary/20" href="https://wa.me/5577998621838">
+<div class="flex items-center gap-3">
+    <!-- Icones de contato navbar -->
+    <a href="https://wa.me/5577998621838" target="_blank" rel="noopener" title="WhatsApp"
+       class="hidden md:flex w-8 h-8 rounded-full border border-white/20 items-center justify-center text-white/60 hover:text-[#d4b06a] hover:border-[#d4b06a]/50 transition-all duration-300">
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+    <a href="https://www.instagram.com/drathamirescoelho/" target="_blank" rel="noopener" title="Instagram"
+       class="hidden md:flex w-8 h-8 rounded-full border border-white/20 items-center justify-center text-white/60 hover:text-[#d4b06a] hover:border-[#d4b06a]/50 transition-all duration-300">
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+    </a>
+    <div class="hidden md:block w-px h-5 bg-white/15 mx-1"></div>
+    <a class="btn-luxury btn-press text-white px-4 md:px-6 py-2 rounded-full font-medium text-xs md:text-sm transition-all hover:scale-105 active:scale-95 shadow-lg shadow-primary/20" href="https://wa.me/5577998621838">
         Agendar <span class="hidden sm:inline">Avaliação</span>
     </a>
-    <button id="mobile-menu-open" class="md:hidden text-zinc-800 dark:text-zinc-200 focus:outline-none">
+    <button id="mobile-menu-open" class="md:hidden text-zinc-200 focus:outline-none">
         <span class="material-symbols-outlined text-3xl">menu</span>
     </button>
 </div>
@@ -137,22 +173,22 @@
 </header>
 
 <!-- Mobile Menu Overlay -->
-<div id="mobile-menu-overlay" class="fixed inset-0 z-[999] bg-white hidden flex-col transition-all duration-300" style="background-color: white !important;">
-    <div class="flex justify-between items-center px-6 py-4 border-b border-zinc-100 bg-white">
-        <img src="assets/images/logo.png" loading="lazy" alt="Dra. Thamires Coelho Logo" class="h-12 w-auto object-contain">
-        <button id="mobile-menu-close" class="text-zinc-800 focus:outline-none p-2">
+<div id="mobile-menu-overlay" class="fixed inset-0 z-[999] bg-[#1a1410] hidden flex-col transition-all duration-300" style="background-color: #1a1410 !important;">
+    <div class="flex justify-between items-center px-6 py-4 border-b border-white/10 bg-[#1a1410]">
+        <img src="assets/images/logo-tc-white.png" loading="lazy" alt="Dra. Thamires Coelho Logo" class="h-12 w-auto object-contain">
+        <button id="mobile-menu-close" class="text-zinc-200 focus:outline-none p-2">
             <span class="material-symbols-outlined text-4xl">close</span>
         </button>
     </div>
-    <div class="flex flex-col items-center gap-6 py-12 font-serif text-2xl font-medium px-6 text-center bg-white">
-        <a class="mobile-nav-link text-primary py-3 w-full border-b border-zinc-100" href="#home">Home</a>
-        <a class="mobile-nav-link text-zinc-800 py-3 w-full border-b border-zinc-100" href="#servicos">Serviços</a>
-        <a class="mobile-nav-link text-zinc-800 py-3 w-full border-b border-zinc-100" href="#clinica">A Clínica</a>
-        <a class="mobile-nav-link text-zinc-800 py-3 w-full border-b border-zinc-100" href="#resultados">Resultados</a>
-        <a class="mobile-nav-link text-zinc-800 py-3 w-full border-b border-zinc-100" href="#localizacao">Localização</a>
+    <div class="flex flex-col items-center gap-6 py-12 font-serif text-2xl font-medium px-6 text-center bg-[#1a1410]">
+        <a class="mobile-nav-link text-[#d4b06a] py-3 w-full border-b border-white/10" href="#home">Home</a>
+        <a class="mobile-nav-link text-zinc-200 py-3 w-full border-b border-white/10" href="#servicos">Serviços</a>
+        <a class="mobile-nav-link text-zinc-200 py-3 w-full border-b border-white/10" href="#clinica">A Clínica</a>
+        <a class="mobile-nav-link text-zinc-200 py-3 w-full border-b border-white/10" href="#resultados">Resultados</a>
+        <a class="mobile-nav-link text-zinc-200 py-3 w-full border-b border-white/10" href="#localizacao">Localização</a>
         
         <div class="mt-8 flex flex-col gap-4 w-full">
-            <a class="bg-gradient-primary text-white px-10 py-5 rounded-full font-bold text-lg shadow-xl" href="https://wa.me/5577998621838">
+            <a class="btn-luxury btn-press text-white px-10 py-5 rounded-full font-bold text-lg shadow-xl" href="https://wa.me/5577998621838">
                 Agendar Avaliação
             </a>
         </div>
@@ -184,14 +220,12 @@
 <!-- Section 1: HERO -->
 <section class="relative min-h-screen flex items-center pt-20 overflow-hidden bg-surface" id="home">
 <div class="absolute inset-0 z-0">
-<img class="w-full h-full object-cover opacity-60" loading="lazy" data-alt="high-end luxury aesthetic clinic interior with soft warm lighting, minimalist decor, and a professional clinical atmosphere" src="assets/images/hero-bg.png"/>
+<img class="w-full h-full object-cover opacity-60" loading="lazy" alt="high-end luxury aesthetic clinic interior with soft warm lighting, minimalist decor, and a professional clinical atmosphere" src="assets/images/hero-bg.png"/>
 <div class="absolute inset-0 bg-gradient-to-r from-surface via-surface/80 to-transparent"></div>
 </div>
 <div class="container mx-auto px-6 md:px-12 relative z-10 grid md:grid-cols-2 gap-12 items-center">
 <div class="max-w-2xl">
-<span id="heroBadge" class="inline-block px-4 py-1 rounded-full bg-secondary-container text-on-secondary-container text-xs font-bold uppercase tracking-widest mb-6">
-                        Dra. Thamires Coelho - Harmonização Orofacial
-                    </span>
+<span id="heroBadge" class="inline-block px-4 py-1 rounded-full bg-secondary-container text-on-secondary-container text-xs font-bold uppercase tracking-widest mb-6"> Dra. Thamires Coelho - Harmonização Orofacial em Vitória da Conquista </span>
 <h1 id="heroTitle" class="font-headline text-5xl md:text-7xl text-on-surface leading-[1.1] mb-8 tracking-tight">
                         Conquiste sua melhor versão com resultados <span class="italic text-primary">naturais e duradouros.</span>
 </h1>
@@ -200,10 +234,10 @@
                     </p>
 <div class="flex flex-col items-start gap-4">
 <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-<a id="ctaMain" href="#servicos" class="w-full sm:w-auto text-center shimmer-button btn-press text-white px-10 py-5 rounded-full font-semibold text-lg hover:scale-105 transition-all shadow-xl shadow-primary/25">
+<a id="ctaMain" href="#servicos" class="w-full sm:w-auto text-center btn-luxury btn-press text-white px-10 py-5 rounded-full font-semibold text-lg hover:scale-105 transition-all shadow-xl shadow-primary/25">
                                 Conhecer o Método TC
                             </a>
-<a id="ctaSecondary" href="https://wa.me/5577998621838" target="_blank" rel="noopener" class="w-full sm:w-auto text-center border border-outline-variant text-primary px-10 py-5 rounded-full font-semibold text-lg hover:bg-surface-container-low transition-all">
+<a id="ctaSecondary" href="https://wa.me/5577998621838" target="_blank" rel="noopener" class="hidden sm:block w-full sm:w-auto text-center border border-outline-variant text-primary px-10 py-5 rounded-full font-semibold text-lg hover:bg-surface-container-low transition-all">
                                 Agendar avaliação
                             </a>
 </div>
@@ -212,7 +246,7 @@
 </div>
 <div class="hidden md:block relative group mt-8 md:mt-0">
     <div class="aspect-[4/5] rounded-xl overflow-hidden shadow-2xl transform md:rotate-2 sway-on-hover">
-        <img class="w-full h-full object-cover" loading="lazy" data-alt="professional portrait of Dra. Thamires Coelho" src="assets/images/hero-portrait.png"/>
+        <img class="w-full h-full object-cover" loading="lazy" alt="professional portrait of Dra. Thamires Coelho" src="assets/images/hero-portrait.png"/>
     </div>
     <div class="absolute -bottom-4 -left-4 md:-bottom-6 md:-left-6 glass-effect p-4 md:p-6 rounded-xl shadow-lg border border-white/20 max-w-[180px] md:max-w-[240px] transition-transform duration-500 group-hover:translate-y-[-5px] z-30">
         <p class="text-primary font-bold italic text-base md:text-lg">+10 anos</p>
@@ -227,7 +261,7 @@
 <div class="bg-white/50 md:bg-transparent rounded-[2.5rem] md:rounded-none overflow-hidden border border-white md:border-none shadow-sm md:shadow-none">
 <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
 <div class="order-1 md:order-2">
-<img class="w-full h-64 md:h-auto object-cover md:rounded-lg" loading="lazy" data-alt="close up clinical technology detail" src="assets/images/tecnologia-filosofia.webp"/>
+<img class="w-full h-64 md:h-auto object-cover md:rounded-lg" loading="lazy" alt="close up clinical technology detail" src="assets/images/tecnologia-filosofia.webp"/>
 </div>
 <div class="order-2 md:order-1 p-8 md:p-0">
 <h2 class="font-headline text-3xl md:text-5xl mb-6 text-on-surface leading-tight">Por que muitos tratamentos não funcionam?</h2>
@@ -248,7 +282,7 @@
 <span class="text-on-surface font-medium">Tecnologia sem estratégia não funciona</span>
 </li>
 </ul>
-<a href="https://wa.me/5577998621838" target="_blank" rel="noopener" class="w-full md:w-auto text-center inline-block shimmer-button btn-press text-white px-8 py-4 rounded-full font-bold shadow-lg hover:scale-105 transition-all">
+<a href="https://wa.me/5577998621838" target="_blank" rel="noopener" class="w-full md:w-auto text-center inline-block btn-luxury btn-press text-white px-8 py-4 rounded-full font-bold shadow-lg hover:scale-105 transition-all" title="Atendimento Dra Thamires Coelho">
                             Descobrir meu protocolo ideal
                         </a>
 </div>
@@ -264,9 +298,7 @@
 <p class="text-xl text-on-surface-variant mb-12 leading-relaxed">
     Não acreditamos em protocolos genéricos. Cada corpo responde de forma diferente, e por isso desenvolvemos estratégias totalmente personalizadas, respeitando a individualidade e a beleza natural de cada paciente. <span class="font-semibold text-primary italic">Nada é padrão em nossa clínica.</span>
 </p>
-<a href="https://wa.me/5577998621838" target="_blank" rel="noopener" class="inline-block bg-primary text-on-primary px-10 py-5 rounded-full font-bold shadow-xl hover:scale-105 transition-all">
-    Descobrir meu protocolo ideal
-</a>
+
 </div>
 </div>
 </section>
@@ -319,12 +351,12 @@
 <div class="grid md:grid-cols-2 gap-0 md:gap-20 items-center">
 <div class="grid grid-cols-2 gap-2 p-2 md:p-0 order-1">
 <div class="space-y-2">
-<img class="w-full h-40 md:h-64 object-cover rounded-tl-[1.5rem] md:rounded-xl grayscale hover:grayscale-0 transition-all duration-500 shadow-md md:shadow-lg" loading="lazy" data-alt="advanced equipment" src="assets/images/diferencial-equipamento.webp"/>
-<img class="w-full h-56 md:h-80 object-cover rounded-bl-[1.5rem] md:rounded-xl md:translate-x-4 grayscale hover:grayscale-0 transition-all duration-500 shadow-md md:shadow-lg" loading="lazy" data-alt="treatment room" src="assets/images/diferencial-ambiente-1.webp"/>
+<img class="w-full h-40 md:h-64 object-cover rounded-tl-[1.5rem] md:rounded-xl md:grayscale hover:grayscale-0 transition-all duration-500 shadow-md md:shadow-lg" loading="lazy" alt="advanced equipment" src="assets/images/diferencial-equipamento.webp"/>
+<img class="w-full h-56 md:h-80 object-cover rounded-bl-[1.5rem] md:rounded-xl md:translate-x-4 md:grayscale hover:grayscale-0 transition-all duration-500 shadow-md md:shadow-lg" loading="lazy" alt="treatment room" src="assets/images/diferencial-ambiente-1.webp"/>
 </div>
 <div class="space-y-2 pt-4 md:pt-12">
-<img class="w-full h-56 md:h-80 object-cover rounded-tr-[1.5rem] md:rounded-xl md:-translate-x-4 grayscale hover:grayscale-0 transition-all duration-500 shadow-md md:shadow-lg" loading="lazy" data-alt="clinical procedure" src="assets/images/diferencial-procedimento.webp"/>
-<img class="w-full h-40 md:h-64 object-cover rounded-br-[1.5rem] md:rounded-xl grayscale hover:grayscale-0 transition-all duration-500 shadow-md md:shadow-lg" loading="lazy" data-alt="clinic interior" src="assets/images/diferencial-ambiente-2.webp"/>
+<img class="w-full h-56 md:h-80 object-cover rounded-tr-[1.5rem] md:rounded-xl md:-translate-x-4 md:grayscale hover:grayscale-0 transition-all duration-500 shadow-md md:shadow-lg" loading="lazy" alt="clinical procedure" src="assets/images/diferencial-procedimento.webp"/>
+<img class="w-full h-40 md:h-64 object-cover rounded-br-[1.5rem] md:rounded-xl md:grayscale hover:grayscale-0 transition-all duration-500 shadow-md md:shadow-lg" loading="lazy" alt="clinic interior" src="assets/images/diferencial-ambiente-2.webp"/>
 </div>
 </div>
 <div class="order-2 p-8 md:p-0">
@@ -383,31 +415,83 @@
                         <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-primary rounded-full"></span> Criadora do exclusivo <strong>Método TC</strong></li>
                     </ul>
                 </div>
-                <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 py-6 md:py-8 border-y border-outline-variant/30 mb-8 md:mb-10">
-                    <div>
-                        <p class="font-bold text-2xl md:text-3xl text-on-surface tracking-tighter">CROBA</p>
-                        <p class="text-[9px] md:text-[10px] uppercase tracking-widest text-on-surface-variant">26858</p>
+                <div id="stats-grid" class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 py-6 md:py-8 border-y border-outline-variant/30 mb-8 md:mb-10">
+                    <div class="text-center md:text-left">
+                        <p class="font-bold text-2xl md:text-3xl text-on-surface tracking-tighter">
+                            +<span class="stat-count" data-target="5000" data-suffix="" data-format="thousands">0</span>
+                        </p>
+                        <p class="text-[9px] md:text-[10px] uppercase tracking-widest text-on-surface-variant">Pacientes Atendidas</p>
                     </div>
-                    <div>
-                        <p class="font-bold text-2xl md:text-3xl text-on-surface tracking-tighter">+17k</p>
+                    <div class="text-center md:text-left">
+                        <p class="font-bold text-2xl md:text-3xl text-on-surface tracking-tighter">
+                            +<span class="stat-count" data-target="10" data-suffix=" anos" data-format="plain">0</span>
+                        </p>
+                        <p class="text-[9px] md:text-[10px] uppercase tracking-widest text-on-surface-variant">De Experiência</p>
+                    </div>
+                    <div class="text-center md:text-left">
+                        <p class="font-bold text-2xl md:text-3xl text-on-surface tracking-tighter">
+                            +<span class="stat-count" data-target="17" data-suffix="k" data-format="plain">0</span>
+                        </p>
                         <p class="text-[9px] md:text-[10px] uppercase tracking-widest text-on-surface-variant">Seguidores</p>
                     </div>
-                    <div>
-                        <p class="font-bold text-2xl md:text-3xl text-on-surface tracking-tighter">112</p>
-                        <p class="text-[9px] md:text-[10px] uppercase tracking-widest text-on-surface-variant">Sala 003</p>
-                    </div>
-                    <div>
-                        <p class="font-bold text-2xl md:text-3xl text-on-surface tracking-tighter">BA</p>
-                        <p class="text-[9px] md:text-[10px] uppercase tracking-widest text-on-surface-variant">VCA</p>
+                    <div class="text-center md:text-left">
+                        <p class="font-bold text-2xl md:text-3xl text-on-surface tracking-tighter">
+                            <span class="stat-count" data-target="49" data-suffix="" data-format="decimal">0</span>&#x2605;
+                        </p>
+                        <p class="text-[9px] md:text-[10px] uppercase tracking-widest text-on-surface-variant">Avaliação Google</p>
                     </div>
                 </div>
-                <a href="https://wa.me/5577998621838" target="_blank" rel="noopener" class="w-full md:w-auto inline-block text-center shimmer-button btn-press text-white px-8 py-4 rounded-full font-bold shadow-lg hover:scale-105 transition-all text-sm md:text-base">
+<script>
+(function() {
+    function animateCount(el) {
+        var target = parseInt(el.dataset.target);
+        var suffix = el.dataset.suffix || '';
+        var format = el.dataset.format;
+        var duration = 1800;
+        var start = null;
+        function easeOut(t) { return 1 - Math.pow(1 - t, 3); }
+        function step(ts) {
+            if (!start) start = ts;
+            var progress = Math.min((ts - start) / duration, 1);
+            var current = Math.floor(easeOut(progress) * target);
+            if (format === 'thousands') {
+                el.textContent = current.toLocaleString('pt-BR') + suffix;
+            } else if (format === 'decimal') {
+                el.textContent = (current / 10).toFixed(1) + suffix;
+            } else {
+                el.textContent = current + suffix;
+            }
+            if (progress < 1) { requestAnimationFrame(step); }
+            else {
+                if (format === 'thousands') el.textContent = target.toLocaleString('pt-BR') + suffix;
+                else if (format === 'decimal') el.textContent = (target / 10).toFixed(1) + suffix;
+                else el.textContent = target + suffix;
+            }
+        }
+        requestAnimationFrame(step);
+    }
+    var grid = document.getElementById('stats-grid');
+    if (!grid) return;
+    var fired = false;
+    var obs = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting && !fired) {
+                fired = true;
+                grid.querySelectorAll('.stat-count').forEach(animateCount);
+                obs.disconnect();
+            }
+        });
+    }, { threshold: 0.4 });
+    obs.observe(grid);
+})();
+</script>
+                <a href="https://wa.me/5577998621838" target="_blank" rel="noopener" class="w-full md:w-auto inline-block text-center btn-luxury btn-press text-white px-8 py-4 rounded-full font-bold shadow-lg hover:scale-105 transition-all text-sm md:text-base" title="Atendimento Dra Thamires Coelho">
                     Falar com especialista
                 </a>
             </div>
             <div class="relative order-1 md:order-2">
                 <div class="relative group">
-                    <img class="rounded-[2rem] md:rounded-xl shadow-2xl relative z-20 w-full h-auto aspect-[4/5] object-cover" loading="lazy" data-alt="Dra. Thamires Coelho professional portrait" src="assets/images/dra-priscila-bio.png"/>
+                    <img class="rounded-[2rem] md:rounded-xl shadow-2xl relative z-20 w-full h-auto aspect-[4/5] object-cover" loading="lazy" alt="Dra. Thamires Coelho professional portrait" src="assets/images/dra-priscila-bio.png"/>
                     <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent z-20 rounded-[2rem] md:rounded-xl pointer-events-none"></div>
                 </div>
                 <div class="absolute -top-6 -right-6 w-32 h-32 bg-primary/10 rounded-full blur-3xl z-10"></div>
@@ -485,7 +569,7 @@
                 <p class="text-xs text-primary font-semibold uppercase tracking-widest mb-4">Alta Definição Mandibular</p>
                 <p class="text-sm text-on-surface-variant leading-relaxed">Procedimento cirúrgico minimamente invasivo para definição e contorno da região submentoniana com resultados permanentes.</p>
                 <div class="mt-6 w-full border-t border-outline-variant/20 pt-6">
-                    <a href="https://wa.me/5577998621838" target="_blank" rel="noopener" class="text-xs font-bold text-primary uppercase tracking-widest hover:underline">Saiba mais →</a>
+                    <a href="https://wa.me/5577998621838" target="_blank" rel="noopener" class="text-xs font-bold text-primary uppercase tracking-widest hover:underline" title="Atendimento Dra Thamires Coelho">Saiba mais →</a>
                 </div>
             </div>
 
@@ -502,7 +586,7 @@
                 <p class="text-xs text-primary font-semibold uppercase tracking-widest mb-4">Rejuvenescimento Facial</p>
                 <p class="text-sm text-on-surface-variant leading-relaxed">Atenuação precisa de rugas de expressão em pontos estratégicos da face, com aplicação individualizada para um resultado natural.</p>
                 <div class="mt-6 w-full border-t border-outline-variant/20 pt-6">
-                    <a href="https://wa.me/5577998621838" target="_blank" rel="noopener" class="text-xs font-bold text-primary uppercase tracking-widest hover:underline">Saiba mais →</a>
+                    <a href="https://wa.me/5577998621838" target="_blank" rel="noopener" class="text-xs font-bold text-primary uppercase tracking-widest hover:underline" title="Atendimento Dra Thamires Coelho">Saiba mais →</a>
                 </div>
             </div>
 
@@ -517,7 +601,7 @@
                 <p class="text-xs text-primary font-semibold uppercase tracking-widest mb-4">Firmeza & Rejuvenescimento</p>
                 <p class="text-sm text-on-surface-variant leading-relaxed">Estimulação profunda da produção natural de colágeno para recuperar a firmeza, elasticidade e jovialidade da pele.</p>
                 <div class="mt-6 w-full border-t border-outline-variant/20 pt-6">
-                    <a href="https://wa.me/5577998621838" target="_blank" rel="noopener" class="text-xs font-bold text-primary uppercase tracking-widest hover:underline">Saiba mais →</a>
+                    <a href="https://wa.me/5577998621838" target="_blank" rel="noopener" class="text-xs font-bold text-primary uppercase tracking-widest hover:underline" title="Atendimento Dra Thamires Coelho">Saiba mais →</a>
                 </div>
             </div>
 
@@ -533,7 +617,7 @@
                 <p class="text-xs text-primary font-semibold uppercase tracking-widest mb-4">Preenchimento Facial</p>
                 <p class="text-sm text-on-surface-variant leading-relaxed">Harmonização facial completa com preenchimento estratégico para restaurar volumes, contornos e simetria da face.</p>
                 <div class="mt-6 w-full border-t border-outline-variant/20 pt-6">
-                    <a href="https://wa.me/5577998621838" target="_blank" rel="noopener" class="text-xs font-bold text-primary uppercase tracking-widest hover:underline">Saiba mais →</a>
+                    <a href="https://wa.me/5577998621838" target="_blank" rel="noopener" class="text-xs font-bold text-primary uppercase tracking-widest hover:underline" title="Atendimento Dra Thamires Coelho">Saiba mais →</a>
                 </div>
             </div>
 
@@ -549,7 +633,7 @@
                 <p class="text-xs text-primary font-semibold uppercase tracking-widest mb-4">Lábios Naturais & Definidos</p>
                 <p class="text-sm text-on-surface-variant leading-relaxed">Volumização e definição dos lábios com ácido hialurônico, respeitando as proporções naturais do seu rosto.</p>
                 <div class="mt-6 w-full border-t border-outline-variant/20 pt-6">
-                    <a href="https://wa.me/5577998621838" target="_blank" rel="noopener" class="text-xs font-bold text-primary uppercase tracking-widest hover:underline">Saiba mais →</a>
+                    <a href="https://wa.me/5577998621838" target="_blank" rel="noopener" class="text-xs font-bold text-primary uppercase tracking-widest hover:underline" title="Atendimento Dra Thamires Coelho">Saiba mais →</a>
                 </div>
             </div>
 
@@ -566,14 +650,14 @@
                 <p class="text-xs text-primary font-semibold uppercase tracking-widest mb-4">Definição Facial Cirúrgica</p>
                 <p class="text-sm text-on-surface-variant leading-relaxed">Remoção das bolas de gordura de Bichat para harmonização e definição do contorno mandibular com elegância e precisão.</p>
                 <div class="mt-6 w-full border-t border-outline-variant/20 pt-6">
-                    <a href="https://wa.me/5577998621838" target="_blank" rel="noopener" class="text-xs font-bold text-primary uppercase tracking-widest hover:underline">Saiba mais →</a>
+                    <a href="https://wa.me/5577998621838" target="_blank" rel="noopener" class="text-xs font-bold text-primary uppercase tracking-widest hover:underline" title="Atendimento Dra Thamires Coelho">Saiba mais →</a>
                 </div>
             </div>
 
         </div>
 
         <div class="text-center">
-            <a href="https://wa.me/5577998621838" target="_blank" rel="noopener" class="inline-block shimmer-button btn-press text-white px-10 py-5 rounded-full font-bold shadow-xl hover:scale-105 transition-all">
+            <a href="https://wa.me/5577998621838" target="_blank" rel="noopener" class="inline-block btn-luxury btn-press text-white px-10 py-5 rounded-full font-bold shadow-xl hover:scale-105 transition-all" title="Atendimento Dra Thamires Coelho">
                 Quero conhecer meu protocolo ideal
             </a>
         </div>
@@ -658,7 +742,7 @@
         <p class="text-xs font-bold uppercase tracking-widest text-primary mb-3">O que os nossos pacientes estão falando</p>
         <h2 class="font-headline text-4xl md:text-5xl text-on-surface">Avaliações Reais no Google</h2>
     </div>
-    <script src="https://elfsightcdn.com/platform.js" async></script>
+    <script defer src="https://elfsightcdn.com/platform.js"></script>
     <div class="elfsight-app-8b47cb3c-713c-46b8-9cf3-44f9a0064c64" data-elfsight-app-lazy></div>
 </div>
 </section>
@@ -671,7 +755,7 @@
             <p class="text-on-surface-variant mb-4">Venha nos visitar em Vitória da Conquista - BA.</p>
             <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto mt-10">
                 <!-- WhatsApp -->
-                <a href="https://wa.me/5577998621838" target="_blank" rel="noopener" class="flex flex-col items-center p-6 rounded-2xl bg-primary/5 hover:bg-primary/10 transition-all group border border-primary/10">
+                <a href="https://wa.me/5577998621838" target="_blank" rel="noopener" class="flex flex-col items-center p-6 rounded-2xl bg-primary/5 hover:bg-primary/10 transition-all group border border-primary/10" title="Atendimento Dra Thamires Coelho">
                     <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" class="text-primary"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                     </div>
@@ -738,8 +822,6 @@
                 </div>
             </div>
         </div>
-
-        </div>
     </div>
 </section>
 
@@ -752,7 +834,7 @@
             <!-- FAQ 1 -->
             <div class="faq-item py-5">
                 <button class="faq-trigger w-full flex items-center justify-between gap-4 text-left" aria-expanded="false">
-                    <span class="faq-question text-base font-medium text-on-surface-variant transition-colors duration-200">O que &eacute; Harmoniza&ccedil;&atilde;o Facial?</span>
+                    <span class="faq-question text-base font-medium text-on-surface-variant transition-colors duration-200">O que &eacute; Harmoniza&ccedil;&atilde;o Facial em Vit&oacute;ria da Conquista?</span>
                     <span class="faq-icon flex-shrink-0 w-7 h-7 rounded-full border border-outline/40 flex items-center justify-center text-on-surface-variant transition-all duration-300">
                         <svg class="plus-icon w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 5v14M5 12h14"/></svg>
                         <svg class="minus-icon w-4 h-4 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14"/></svg>
@@ -800,7 +882,7 @@
             <!-- FAQ 4 -->
             <div class="faq-item py-5">
                 <button class="faq-trigger w-full flex items-center justify-between gap-4 text-left" aria-expanded="false">
-                    <span class="faq-question text-base font-medium text-on-surface-variant transition-colors duration-200">A Lipo de Papada &eacute; segura?</span>
+                    <span class="faq-question text-base font-medium text-on-surface-variant transition-colors duration-200">A Lipo de Papada em Vit&oacute;ria da Conquista &eacute; segura?</span>
                     <span class="faq-icon flex-shrink-0 w-7 h-7 rounded-full border border-outline/40 flex items-center justify-center text-on-surface-variant transition-all duration-300">
                         <svg class="plus-icon w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 5v14M5 12h14"/></svg>
                         <svg class="minus-icon w-4 h-4 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14"/></svg>
@@ -816,7 +898,7 @@
             <!-- FAQ 5 -->
             <div class="faq-item py-5">
                 <button class="faq-trigger w-full flex items-center justify-between gap-4 text-left" aria-expanded="false">
-                    <span class="faq-question text-base font-medium text-on-surface-variant transition-colors duration-200">O que &eacute; Rinomodela&ccedil;&atilde;o?</span>
+                    <span class="faq-question text-base font-medium text-on-surface-variant transition-colors duration-200">O que &eacute; Rinomodela&ccedil;&atilde;o em Vit&oacute;ria da Conquista?</span>
                     <span class="faq-icon flex-shrink-0 w-7 h-7 rounded-full border border-outline/40 flex items-center justify-center text-on-surface-variant transition-all duration-300">
                         <svg class="plus-icon w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 5v14M5 12h14"/></svg>
                         <svg class="minus-icon w-4 h-4 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14"/></svg>
@@ -879,7 +961,7 @@
         <p class="text-lg md:text-xl opacity-90 mb-6 italic max-w-2xl mx-auto">"Devido ao alto nível de personalização e exclusividade, o número de novas avaliações por semana é limitado."</p>
         <h2 class="font-headline text-5xl md:text-7xl mb-8">Sua transformação começa agora.</h2>
         <p class="text-lg opacity-80 mb-12">Agende sua avaliação e descubra o melhor protocolo para você.</p>
-        <a id="ctaFooter" href="https://wa.me/5577998621838" target="_blank" rel="noopener" class="inline-block shimmer-button btn-press text-white px-12 py-6 rounded-full font-bold text-xl shadow-2xl hover:scale-105 active:scale-95 transition-all text-decoration-none">
+        <a id="ctaFooter" href="https://wa.me/5577998621838" target="_blank" rel="noopener" class="inline-block btn-luxury btn-press text-white px-12 py-6 rounded-full font-bold text-xl shadow-2xl hover:scale-105 active:scale-95 transition-all text-decoration-none">
             Agendar minha avaliação
         </a>
     </div>
@@ -983,14 +1065,14 @@
     duration: 800,
     easing: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',
     reset: false,
-    mobile: true,
+    mobile: false,
   });
 
   /* -- HERO -- */
-  sr.reveal('#home span',          { origin: 'top',    delay: 100, distance: '20px' });
+  sr.reveal('#heroBadge',          { origin: 'top',    delay: 100, distance: '20px' });
   sr.reveal('#home h1',            { origin: 'bottom', delay: 200 });
   sr.reveal('#home p',             { origin: 'bottom', delay: 320 });
-  sr.reveal('#home .flex-wrap',    { origin: 'bottom', delay: 440 });
+  sr.reveal('#home .flex-col.items-start',    { origin: 'bottom', delay: 440 });
   sr.reveal('#home .aspect-\\[4\\/5\\]',  { origin: 'right',  delay: 300 });
   sr.reveal('#home .glass-effect', { origin: 'left',   delay: 500 });
 
@@ -1073,6 +1155,40 @@
         ['ctaSecondary', 'ctaFooter'].forEach(id => updateAttr(id, 'href', siteConfig.contact.whatsapp));
     });
 </script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const header = document.getElementById('main-header');
+        const nav = document.getElementById('main-nav');
+        const logo = document.getElementById('header-logo');
+        
+        function handleScroll() {
+            if (window.scrollY > 50) {
+                header.classList.remove('bg-[#1a1410]/95', 'shadow-md');
+                header.classList.add('bg-[#1a1410]/60', 'shadow-none');
+                nav.classList.remove('py-4');
+                nav.classList.add('py-1.5');
+                if(logo) {
+                    logo.classList.remove('h-14', 'md:h-20');
+                    logo.classList.add('h-10', 'md:h-14');
+                }
+            } else {
+                header.classList.remove('bg-[#1a1410]/60', 'shadow-none');
+                header.classList.add('bg-[#1a1410]/95', 'shadow-md');
+                nav.classList.remove('py-1.5');
+                nav.classList.add('py-4');
+                if(logo) {
+                    logo.classList.remove('h-10', 'md:h-14');
+                    logo.classList.add('h-14', 'md:h-20');
+                }
+            }
+        }
+        
+        window.addEventListener('scroll', handleScroll);
+        handleScroll();
+    });
+</script>
 </body>
 </html>
+
 
