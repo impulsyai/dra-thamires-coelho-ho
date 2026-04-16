@@ -120,7 +120,76 @@
         0% { transform: translateX(-100%) rotate(45deg); }
         100% { transform: translateX(100%) rotate(45deg); }
       }
-      .btn-press:active { transform: scale(0.96); }
+      /* 🎞️ Film Grain & Bloom */
+      .film-grain {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 9999;
+        opacity: 0.04;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+      }
+
+      /* 📽️ Editorial Marquee */
+      .marquee-container {
+        overflow: hidden;
+        background: var(--primary, #b08d57);
+        padding: 1.5rem 0;
+        transform: rotate(-1deg) scale(1.05);
+        margin: 4rem 0;
+        position: relative;
+        z-index: 20;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      }
+      .marquee-content {
+        display: flex;
+        width: max-content;
+        animation: marquee-scroll 60s linear infinite;
+        will-change: transform;
+      }
+      @keyframes marquee-scroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-33.333%); }
+      }
+
+      /* 🎭 Masked Reveals */
+      .mask-wrap {
+        overflow: hidden;
+        display: block;
+      }
+      .mask-text {
+        display: block;
+        transform: translateY(100%);
+      }
+
+      /* 🌊 Floating Progress Widget */
+      #scroll-progress-widget {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 100;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: white;
+        border-radius: 50%;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        cursor: pointer;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+      #scroll-progress-widget.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .progress-ring__circle {
+        transition: stroke-dashoffset 0.1s;
+        transform: rotate(-90deg);
+        transform-origin: 50% 50%;
+      }
     </style>
 
 <style id="anti-fouc">
@@ -136,6 +205,16 @@
 <script>document.documentElement.classList.add('js');</script>
 </head>
 <body class="bg-surface font-body text-on-surface selection:bg-primary/20">
+    <!-- 🎞️ Film Grain Texture Overlay -->
+    <div class="film-grain"></div>
+
+    <!-- 🌊 Floating Progress Widget -->
+    <div id="scroll-progress-widget" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <svg height="44" width="44" class="progress-ring">
+            <circle class="progress-ring__circle" stroke="#b08d57" stroke-width="2" fill="transparent" r="18" cx="22" cy="22"/>
+        </svg>
+        <span class="material-symbols-outlined absolute text-primary text-xl">expand_less</span>
+    </div>
 <!-- TopNavBar -->
 <script src="config.js"></script>
 <header id="main-header" class="fixed top-0 w-full z-50 bg-[#1a1410]/95 backdrop-blur-xl shadow-md transition-all duration-500">
@@ -242,7 +321,8 @@
 <div class="max-w-2xl">
 <span id="heroBadge" class="inline-block px-4 py-1 rounded-full bg-secondary-container text-on-secondary-container text-xs font-bold uppercase tracking-widest mb-6"> Dra. Thamires Coelho - Harmonização Orofacial em Vitória da Conquista </span>
 <h1 id="heroTitle" class="font-headline text-5xl md:text-7xl text-on-surface leading-[1.1] mb-8 tracking-tight">
-                        Conquiste sua melhor versão com resultados <span class="italic text-primary">naturais e duradouros.</span>
+                        <span class="mask-wrap"><span class="mask-text">Conquiste sua melhor versão</span></span>
+                        <span class="mask-wrap"><span class="mask-text italic text-primary">naturais e duradouros.</span></span>
 </h1>
 <p id="heroDescription" class="text-lg md:text-xl text-on-surface-variant mb-10 leading-relaxed font-light">
                         Tecnologia avançada e <span class="font-semibold text-primary">protocolos exclusivos 100% personalizados</span> em um ambiente premium e acolhedor para transformar sua autoestima.
@@ -270,6 +350,15 @@
 </div>
 </div>
 </section>
+
+    <!-- 📽️ EDITORIAL MARQUEE -->
+    <div class="marquee-container">
+        <div class="marquee-content font-headline text-white text-xs md:text-lg font-black uppercase tracking-[0.3em]">
+            <span class="inline-block px-10">Lipo de Papada HD • Harmonização Orofacial • Redensificação de Colágeno • Bichectomia Elite • Método TC Premium • Excelência Clínica •</span>
+            <span class="inline-block px-10">Lipo de Papada HD • Harmonização Orofacial • Redensificação de Colágeno • Bichectomia Elite • Método TC Premium • Excelência Clínica •</span>
+            <span class="inline-block px-10">Lipo de Papada HD • Harmonização Orofacial • Redensificação de Colágeno • Bichectomia Elite • Método TC Premium • Excelência Clínica •</span>
+        </div>
+    </div>
 <!-- Section 2: BELIEF BREAKER -->
 <section class="py-20 md:py-24 bg-[#f8f4f1]">
 <div class="container mx-auto px-6 md:px-12">
@@ -1088,6 +1177,79 @@
 
   /* -- FOOTER -- */
   sr.reveal('footer .grid > div', { origin: 'bottom', interval: 150, delay: 100 });
+</script>
+
+<!-- GSAP & Luxury Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    // 🎭 Masked Reveals Animation
+    document.querySelectorAll('.mask-text').forEach((text) => {
+        gsap.to(text, {
+            y: 0,
+            duration: 1.2,
+            ease: "power4.out",
+            scrollTrigger: {
+                trigger: text,
+                start: "top 90%",
+            }
+        });
+    });
+
+    // 🌊 Progress Widget Logic
+    const progressWidget = document.getElementById('scroll-progress-widget');
+    const circle = document.querySelector('.progress-ring__circle');
+    const radius = circle.r.baseVal.value;
+    const circumference = radius * 2 * Math.PI;
+
+    circle.style.strokeDasharray = `${circumference} ${circumference}`;
+    circle.style.strokeDashoffset = circumference;
+
+    function setProgress(percent) {
+        const offset = circumference - (percent / 100 * circumference);
+        circle.style.strokeDashoffset = offset;
+    }
+
+    window.addEventListener('scroll', () => {
+        const h = document.documentElement, 
+              b = document.body,
+              st = 'scrollTop',
+              sh = 'scrollHeight';
+        const percent = (h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight) * 100;
+        setProgress(percent);
+
+        if (window.scrollY > 300) {
+            progressWidget.classList.add('visible');
+        } else {
+            progressWidget.classList.remove('visible');
+        }
+    });
+
+    // Parallax Blobs Generation
+    function createBlobs() {
+        for(let i=0; i<4; i++) {
+            const blob = document.createElement('div');
+            blob.className = 'fixed rounded-full blur-[120px] opacity-20 -z-10 pointer-events-none bg-primary';
+            const size = Math.random() * 300 + 200;
+            blob.style.width = size + 'px';
+            blob.style.height = size + 'px';
+            blob.style.left = Math.random() * 100 + '%';
+            blob.style.top = Math.random() * 100 + '%';
+            document.body.appendChild(blob);
+
+            gsap.to(blob, {
+                y: -100,
+                x: 50,
+                duration: Math.random() * 10 + 10,
+                repeat: -1,
+                yoyo: true,
+                ease: "sine.inOut"
+            });
+        }
+    }
+    createBlobs();
 </script>
 <script>
     // Script de Hidratação Dinâmica - Impulsy.ai
