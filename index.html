@@ -137,7 +137,8 @@
       }
       .mask-text {
         display: block;
-        transform: translateY(100%);
+        transform: translateY(105%);
+        will-change: transform;
       }
 
       /* 🌊 Floating Progress Widget */
@@ -178,12 +179,9 @@
     </style>
 
 <style id="anti-fouc">
-  html.js #heroBadge,
-  html.js #home h1,
-  html.js #home p,
-  html.js #home .flex-col.items-start,
-  html.js #home .aspect-\[4\/5\],
-  html.js #home .glass-effect {
+  /* Apenas elementos secundários que podem esperar o SR */
+  html.js .bg-surface-container-lowest,
+  html.js #clinica .relative > img {
     visibility: hidden;
   }
 </style>
@@ -1092,16 +1090,8 @@
     duration: 800,
     easing: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',
     reset: false,
-    mobile: false,
+    mobile: true,
   });
-
-  /* -- HERO -- */
-  sr.reveal('#heroBadge',          { origin: 'top',    delay: 100, distance: '20px' });
-  sr.reveal('#home h1',            { origin: 'bottom', delay: 200 });
-  sr.reveal('#home p',             { origin: 'bottom', delay: 320 });
-  sr.reveal('#home .flex-col.items-start',    { origin: 'bottom', delay: 440 });
-  sr.reveal('#home .aspect-\\[4\\/5\\]',  { origin: 'right',  delay: 300 });
-  sr.reveal('#home .glass-effect', { origin: 'left',   delay: 500 });
 
   /* -- SECTION HEADINGS (global) -- */
   sr.reveal('h2', { origin: 'bottom', distance: '30px', duration: 700, interval: 0 });
@@ -1164,16 +1154,27 @@
 
     // 🎭 Masked Reveals Animation
     document.querySelectorAll('.mask-text').forEach((text) => {
+        const isHero = text.closest('#home');
+        
         gsap.to(text, {
             y: 0,
             duration: 1.2,
             ease: "power4.out",
-            scrollTrigger: {
+            delay: isHero ? 0.6 : 0,
+            scrollTrigger: isHero ? null : {
                 trigger: text,
                 start: "top 90%",
             }
         });
     });
+
+    // 🚀 High-Reliability Hero Animation (GSAP)
+    const heroTl = gsap.timeline({delay: 0.2});
+    heroTl.fromTo('#heroBadge', {opacity: 0, y: -20}, {opacity: 1, y: 0, duration: 0.8, ease: "power2.out"})
+          .fromTo('#heroDescription', {opacity: 0, y: 20}, {opacity: 1, y: 0, duration: 0.8, ease: "power2.out"}, "-=0.6")
+          .fromTo('#home .flex-col.items-start', {opacity: 0, y: 20}, {opacity: 1, y: 0, duration: 0.8, ease: "power2.out"}, "-=0.6")
+          .fromTo('#home .aspect-\\[4\\/5\\]', {opacity: 0, x: 30}, {opacity: 1, x: 0, duration: 1, ease: "power3.out"}, "-=0.8")
+          .fromTo('#home .glass-effect', {opacity: 0, x: -30}, {opacity: 1, x: 0, duration: 1, ease: "power3.out"}, "-=0.8");
 
     // 🌊 Progress Widget Logic
     const progressWidget = document.getElementById('scroll-progress-widget');
